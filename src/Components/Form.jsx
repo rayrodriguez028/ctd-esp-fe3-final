@@ -32,6 +32,7 @@ const Form = () => {
     ) {
       setError(false);
       setShow(true);
+      console.log("datos contacto: ",person.name, person.email);
     } else {
       setError(true);
       setShow(false);
@@ -44,12 +45,16 @@ const Form = () => {
         <input type="text" value={person.name} onChange={handleChangeName}/>
         <label>Email: </label>
         <input type="email" value={person.email} onChange={handleChangEmail}/>
-        <button>Enviar</button>
+        <button type="submit">Send</button>
+        <button type="reset" onClick={reset}>Reset form</button>
+        <br />
       </form>
-      <button onClick={reset}>Reset form</button>
-      { error ? <h4 className="error"> 
-        Por favor verifique su información nuevamente</h4> 
-      : show ? <Message person={person} /> : ""}
+      <div>
+        <br />
+        { error ? <h4 className="error"> 
+          💥👀💥 Por favor verifique su información nuevamente 💥👀💥</h4> 
+        : show ? <Message person={person} /> : <h4></h4> }
+      </div>
     </div>
   );
 };

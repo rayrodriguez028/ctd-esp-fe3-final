@@ -14,7 +14,7 @@ const Card = ({ dentista }) => {
       {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
       <img className="img-doctor" src="./images/doctor.jpg" alt='doctor' />
       <Link to={"/dentist/" + dentista.id}>
-        <h2>{dentista.name}</h2>
+        <h3>{dentista.name}</h3>
       </Link>
       <h3>{dentista.username}</h3>
       <button className="favButton" onClick={addFav}>{isFav ? "💖" : "🤍"}</button>

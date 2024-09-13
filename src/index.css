@@ -41,7 +41,7 @@ a{
 }
 a:hover{
   color: rgb(136, 136, 136);
-  color: rgb(38, 155, 218);
+  color: rgb(206, 217, 142);
   text-decoration: underline;
 } 
 button:hover{
@@ -50,7 +50,8 @@ button:hover{
 } 
 footer {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content:flex-start;
   text-align: center;
   padding: 1rem;
   position: fixed;
@@ -66,15 +67,6 @@ footer > img{
 footer > p{
   margin: 0;
   padding-top: 0.7rem;
-}
-
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
 }
 
 .card{
@@ -174,10 +166,59 @@ main {
   padding: 20px;
 }
 
-.div-form{
-  height: 100%;
-}
-
 .error{
   color: #6f0303;
+  font-size:x-large;
 }
+.h4-message{
+  font-size:x-large;
+}
+
+.div-detail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+label {
+  margin-top: 1em;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+}
+
+button[type="submit"], [type="reset"] {
+  margin-top: 1em;
+  padding: 0.7em;
+  border-radius: 0.5em;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+button[type="submit"]:hover, [type="reset"]:hover {
+  background-color: rgb(38, 155, 218);;
+}
+
+.div-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+

@@ -15,6 +15,7 @@ const Context = ({ children }) => {
   const url = "https://jsonplaceholder.typicode.com/users";
   useEffect(() => {
     axios(url).then((res) => {
+      console.log("lista dentistas: ",res.data);
       dispatch({ type: "GET_DENTISTA", payload: res.data});
     });
     localStorage.setItem("favs", JSON.stringify(state.favs));

@@ -10,7 +10,7 @@ const Home = () => {
       {/* Aqui deberias renderizar las cards */}
       <h1>Home</h1>
       <div className='card-grid'>
-        {state.list?.map((dentista) => (
+        {state.list?.length === 0 ? <h2>😴 No hay dentistas para mostrar 😴</h2> : state.list?.map((dentista) => (
           <Card key={dentista.id} dentista={dentista}/>
         ))}
       </div>
